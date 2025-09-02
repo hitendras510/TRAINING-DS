@@ -1,8 +1,8 @@
-//01_09_2025
+// //01_09_2025
 
-#include <stdio.h>
-int main()
-{
+// #include <stdio.h>
+// int main()
+// {
     // for (int i = 10; i > 0; i--)
     // {
     //     if (i % 2 == 1)
@@ -21,16 +21,16 @@ int main()
     // }
     
 
- int num = 123456789;
- int sum = 0;
- while (num > 0)
- {
-    int lastDigit=num%10;
-    sum=sum+lastDigit;
-    num=num/10;
+//  int num = 123456789;
+//  int sum = 0;
+//  while (num > 0)
+//  {
+//     int lastDigit=num%10;
+//     sum=sum+lastDigit;
+//     num=num/10;
 
- }
- printf("%d", sum);
+//  }
+//  printf("%d", sum);
 
-    return 0;
-}
+//     return 0;
+// }
