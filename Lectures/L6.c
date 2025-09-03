@@ -13,23 +13,36 @@ int main()
     // }
     // printf("The reversed  number is: %d\n", res);
     //////////////////////////////////////////////////////////////////////////////////////////////////
-    // int n = 5;
-    // int i,
-    //     if (num <= 1)
+    // #include <stdio.h>
+
+    // int main()
     // {
-    //     printf("Not a prime\n");
-    // }
-    // else
-    // {
-    //     for (i = 2; i < n; i++)
+    //     int n = 5;          // number to check
+    //     int i, isPrime = 1; // assume number is prime
+
+    //     if (n <= 1)
     //     {
-    //         if (n % i == 0)
-    //         {
-    //             printf("Not a prime\n");
-    //             break;
-    //         }
+    //         printf("Not a prime\n");
     //     }
+    //     else
+    //     {
+    //         for (i = 2; i < n; i++)
+    //         {
+    //             if (n % i == 0)
+    //             {
+    //                 isPrime = 0; // not prime
+    //                 break;       // no need to check further
+    //             }
+    //         }
+    //         if (isPrime == 1)
+    //             printf("Prime\n");
+    //         else
+    //             printf("Not a prime\n");
+    //     }
+
+    //     return 0;
     // }
+
     //////////////////////////////////////////////////////////////////////////////////////////////////
     // int i,n,fact=1;
     // printf("Enter a number: ");
