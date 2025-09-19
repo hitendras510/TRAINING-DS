@@ -53,5 +53,5 @@ for(int i=0;i<6;i++){
     
     }
 }
-printf("%d",maxSum);ṇ
+printf("%d",maxSum);
 }
