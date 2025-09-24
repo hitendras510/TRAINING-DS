@@ -1,20 +1,36 @@
-//////SUM OF ARRAY
-#include <limits.h>
+
+//////
+#include <stdio.h>
 
 int main()
 {
-    int arr[5] = {1, 2, -4, 3, 5};
-    int maxSum = INT_MIN;
+    int arr[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}
 
-    for (int i = 0; i < 5; i++)
+    };
+
+    int t = 0, b = 2;
+    int left = 0, right = 2;
+
+    while (t <= b && left <= right)
     {
-        int currSum = 0;
-        for (int j = 1; j < 6; j++)
+        for (int i = left; i <= right; i++)
         {
-            currSum = currSum + arr[j];
-            if (currSum > maxSum)
-                maxSum = currSum;
+            printf("%d ", arr[t][i]);
         }
+        t++;
+
+        for (int i = t; i <= b; i++)
+            printf("%d ", arr[i][right]);
+        right--;
+
+        for (int i = right; i >= left; i--)
+            printf("%d ", arr[b][i]);
+        b--;
+
+        for (int i = b; i >= t; i--)
+            printf("%d ", arr[i][left]);
+        left++;
     }
-    printf("%d", maxSum);
+
+    return 0;
 }
