@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<string.h>
 int main(){
 
     // char name[] = "hii"; 
@@ -6,13 +7,7 @@ int main(){
     ///////////////////////////////////
     
     char name[] = "hitendra"; 
-    int i = 0;
-
-    while(name[i] != '\0'){
-        printf("%c\n",name[i]);
-        i++;
-    }
-    
+   char data[10];
 
 
 
