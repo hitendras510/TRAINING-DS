@@ -1,2 +1,3 @@
-
-    // char name[] = "hii"; 
+#include<stdio.h>
+// #include <string.h>
+// int main(){

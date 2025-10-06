@@ -1,6 +1,6 @@
-#include<stdio.h>
-#include <string.h>
-int main(){
+// #include<stdio.h>
+// #include <string.h>
+// int main(){
 
 
     // chstr[] = "hii"; 
@@ -48,35 +48,54 @@ int main(){
 // }
 // printf("%s\n",name);
 
-////////////////////////////////REMOVE DUPLICATE
+////////////////////////////////count of duplicate
 
-char str[]="madam";
-char ln = strlen[str];
-int index = 0; //index
+// char str[]="madam";
+// char ln = strlen(str);
+// int index = 0; //count
 
-for(int i=0;i<ln;i++){
-for(int j= 0; j<i;j++){
-    if(str[i] == str[j]){
-    break;
+// for(int i=0;i<ln;i++){
+// for(int j= i+1; j<ln;j++)
+// {
+//     if(str[i] == str[j]){
+//         index++;
+//     }
+// }
+// }
+// printf("%d\n",index);
+///////////remove duplicate
+#include <stdio.h>
+#include <string.h>
+
+    int main()
+    {
+        char str[] = "madam";
+        int ln = strlen(str);
+        int index = 0; // for unique chars
+
+        for (int i = 0; i < ln; i++)
+        {
+            int isDuplicate = 0;
+            for (int j = 0; j < i; j++)
+            { 
+                if (str[i] == str[j])
+                {
+                    isDuplicate = 1;
+                    break;
+                }
+            }
+
+            if (!isDuplicate)
+            { 
+                str[index] = str[i];
+                index++;
+            }
+        }
+
+        for (int i = 0; i < index; i++)
+        {
+            printf("%c\n", str[i]);
+        }
+
+        return 0;
     }
-}
-if( j == i){
-    str[index++]=str[i];
-}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-return 0;
-}
