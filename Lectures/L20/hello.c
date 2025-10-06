@@ -50,7 +50,7 @@ int main(){
 
 ////////////////////////////////REMOVE DUPLICATE
 
-char str[]="wow";
+char str[]="madam";
 char ln = strlen[str];
 int index = 0; //index
 
