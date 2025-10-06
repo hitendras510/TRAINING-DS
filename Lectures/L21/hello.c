@@ -6,8 +6,16 @@ int main(){
     // printf("Name: %s", name);
     ///////////////////////////////////
     
-    char name[] = "hitendra"; 
-   char data[10];
+char name[] = "wow"; 
+int ln= strlen(name);
+int isTrue=1;
+for(int i=0;i<ln/2;i++){
+if(name[i]!=name[ln-i-1]){
+        isTrue=0;
+        break;
+    }
+}
+printf("%s\n",name);
 
 
 
