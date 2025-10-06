@@ -3,7 +3,7 @@
 int main(){
 
 
-    // char name[] = "hii"; 
+    // chstr[] = "hii"; 
 // for(int i=0;name[i]!='\0';i++){
 //     printf("Name: %c \n", name[i]);
 // };
@@ -29,7 +29,10 @@ int main(){
 //     data[i] = name[i];
 // }
 // printf("%s",data);
-//////////////////////
+
+//////////////////////PALINDROME
+
+
 
 
 
@@ -44,6 +47,28 @@ int main(){
 //     }
 // }
 // printf("%s\n",name);
+
+////////////////////////////////REMOVE DUPLICATE
+
+char str[]="wow";
+char ln = strlen[str];
+int index = 0; //index
+
+for(int i=0;i<ln;i++){
+for(int j= 0; j<i;j++){
+    if(str[i] == str[j]){
+    break;
+    }
+}
+if( j == i){
+    str[index++]=str[i];
+}
+}
+
+
+
+
+
 
 
 
