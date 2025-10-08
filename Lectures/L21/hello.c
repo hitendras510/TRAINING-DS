@@ -52,8 +52,18 @@ int main(){
 //         printf("%c %d\n",i,freq[i]);
 //     }
 // }
-
-/*************  ✨ Windsurf Command 🌟  *************/
-char str[] = "abcd";
-int freq[256] = {0};
-i
+char str[]="hello";
+char target='e';
+char newStr[100];
+int j=0;
+int ln = strlen(str);
+for(int i=0;i<ln;i++){
+    if(str[i]==target){
+        continue;
+    }
+    newStr[j]=str[i];
+    j++;
+}
+newStr[j]='\0';
+printf("%s",newStr);
+}
