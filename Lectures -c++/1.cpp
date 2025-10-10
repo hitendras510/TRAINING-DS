@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 
 struct Node {
     int data;
@@ -21,24 +22,38 @@ void display(Node* first) {
     std::cout << "nullptr" << std::endl;
 }
 
+void addNodeAtEnd(Node*& first, int val) {
+    Node *newNode = new Node;
+    newNode->data = val;
+    newNode->next = nullptr;
+
+    if (first == nullptr) {
+        first = newNode;
+        return;
+    }
+
+    Node* temp = first;
+    while (temp->next != nullptr) {
+        temp = temp->next;
+    }
+    
+    temp->next = newNode;
+}
+
 int main() {
     Node *first = nullptr;
 
-    int numNodes;
-    std::cout << "How many nodes do you want to add? ";
-    std::cin >> numNodes;
-
-    for (int i = 0; i < numNodes; ++i) {
-        int value;
-        std::cout << "Enter value for node " << i + 1 << ": ";
-        std::cin >> value;
-        addNode(first, value);
-    }
-
-    std::cout << "\nThe linked list is: ";
+    addNode(first, 20);
+    addNode(first, 10);
+    std::cout << "After adding to the front: ";
     display(first);
 
-    std::cout << "\nDeleting all nodes..." << std::endl;
+    addNodeAtEnd(first, 30);
+    addNodeAtEnd(first, 40);
+    std::cout << "After adding to the end:  ";
+    display(first);
+
+    std::cout << "Deleting all nodes..." << std::endl;
     Node* temp = first;
     while (temp != nullptr) {
         Node* nextNode = temp->next;
