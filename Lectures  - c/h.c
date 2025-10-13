@@ -1,82 +1,32 @@
-// #include <stdio.h>
-// #include <string.h>
-// int main(){
-
-//     char str[]="abc";
-//   int ln=    strlen(str);
-//     int freq[256]={0};
-//     for(int i=0;i<ln;i++){
-//         freq[str[i]]++;
-//     }
-//     for(int i =0;i<ln;i++){
-//         if(freq[str[i]]==1){
-//             printf("%c",str[i]);
-//             break;
-//         }
-//     }
-
-//     // char str[] ="hello";
-//     // char target='e';
-//     // char nStr[100];
-//     // int j=0;
-//     //  int ln=     strlen(str);
-//     //  for(int i=0;i<ln;i++){
-//     //     if(str[i]!=target){
-//     //         nStr[j]=str[i];
-//     //         j++;
-
-//     //     }
-
-//     //  }
-//     //  nStr[j]='\0';
-//     //  printf("%s",nStr);
-
-// }
-
-// // abcbjfbebf
-
+//DMA = dynamic memory allocation;
 #include <stdio.h>
-#include <string.h>
-int main()
-{
-    char str[] = "bca";
-    int ln = strlen(str);
+#include <stdlib.h>
+int main(){
+    // int n;
+    // printf("Enter size:");
+    // scanf("%d",&n);
+    
+    // int *arr = (int *)malloc(n*sizeof(int));
 
-    for (int i = 0; i < ln - 1; i++)
-    {
-        for (int j = i + 1; j < ln; j++)
-        {
-            if (str[i] > str[j])
-            {
-                char temp = str[i];
-                str[i] = str[j];
-                str[j] = temp;
-            }
-        }
-    }
-    printf("%s", str);
-    // char subStr[]="abc";
-    // if(strstr(str,subStr)!=NULL){
-    //     printf("true");
-    // }else{
-    //     printf("false");
+    // printf("Enter  elements:\n");
+    // for(int i=0;i<n;i++){
+    //     scanf("%d",&arr[i]);
+    // }
+    // for(int i=0;i<n;i++){
+    //     printf("%d ",arr[i]);
     // }
 
-    // target="abc"
+    int n;
+    printf("Enter size:");
+    scanf("%d", &n);
 
-    //     int ln=   strlen(str);
-    //    int    freq[256]={0};
-    //    char result;
-    //    int max=0;
-    //    for(int i=0;i<ln;i++){
-    //     freq[str[i]]++;
-    //    }
-    //    for(int i=0;i<ln;i++){
-    //     if(freq[str[i]]>max){
-    //         max=freq[str[i]];
-    //         result=str[i];
+    int *arr = (int *)malloc(n*sizeof(int));
 
-    //     }
-    //    }
-    //    printf("%c -> %d",result,max);
+    printf("Enter the elements:\n");
+    for(int i=0;i<n;i++){
+        scanf("%d", &arr[i]);
+    }
+    for(int i=0;i<n;i++){
+        printf("%d",arr[i]);
+    }
 }
