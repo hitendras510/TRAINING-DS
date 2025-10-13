@@ -103,9 +103,9 @@ int main()
     addnode(50);
     addnode(60);
     addnode(70);
-
     Add_before(50, 100);
     Add_After(30, 200);
-
+    
     disp();
+    
 }
