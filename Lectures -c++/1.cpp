@@ -1,66 +1,71 @@
-#include <iostream>
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<iostream>
+#define null 0
 using namespace std;
 
-struct Node {
-    int data;
-    Node *next;
+ struct node
+{
+  int data;
+    node *next;
 };
+node *first,*temp,*ttemp,*p,*q,*r,*ptemp,*pttemp,
+*ntemp,*nttemp;
 
-void addNode(Node*& first, int val) {
-    Node* temp = new Node;
-    temp->data = val;
-    temp->next = first;
-    first = temp;
+void init()
+{
+ first=temp=ttemp=null;
 }
+void addnode(int val)
+{
+  temp=first;
+  while(temp->next!=null)
+  {
+  temp=temp->next;
 
-void display(Node* first) {
-    Node* temp = first;
-    while (temp != nullptr) {
-        std::cout << temp->data << " -> ";
+  }
+  ttemp=new node;
+  ttemp->data=val;
+  ttemp->next=null;
+  temp->next=ttemp;
+}
+void createfirst(int val)
+{
+ first=new node;
+  first->data=val;
+  first->next=null;
+}
+void disp()
+{
+ temp=first;
+ while(temp!=null)
+ {
+   cout<<temp->data<<endl;
+   temp=temp->next;
+ }
+}
+void Add_After(int x, int y)
+{
+    temp = first;
+    while (temp->data != x)
+    {
         temp = temp->next;
     }
-    std::cout << "nullptr" << std::endl;
+    ttemp = new node;
+    ttemp->data = y;
+    ttemp->next = temp->next;
+    temp->next = ttemp;
 }
 
-void addNodeAtEnd(Node*& first, int val) {
-    Node *newNode = new Node;
-    newNode->data = val;
-    newNode->next = nullptr;
+int main()
+{
+	init();
+	createfirst(10);
+	addnode(20);
+	addnode(30);
+	addnode(50);
+	addnode(60);
+	disp();
 
-    if (first == nullptr) {
-        first = newNode;
-        return;
-    }
-
-    Node* temp = first;
-    while (temp->next != nullptr) {
-        temp = temp->next;
-    }
-    
-    temp->next = newNode;
-}
-
-int main() {
-    Node *first = nullptr;
-
-    addNode(first, 20);
-    addNode(first, 10);
-    std::cout << "After adding to the front: ";
-    display(first);
-
-    addNodeAtEnd(first, 30);
-    addNodeAtEnd(first, 40);
-    std::cout << "After adding to the end:  ";
-    display(first);
-
-    std::cout << "Deleting all nodes..." << std::endl;
-    Node* temp = first;
-    while (temp != nullptr) {
-        Node* nextNode = temp->next;
-        delete temp;
-        temp = nextNode;
-    }
-    first = nullptr;
-
-    return 0;
 }
