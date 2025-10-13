@@ -49,13 +49,12 @@ void Add_After(int x, int y)
 {
     temp = first;
     while (temp->data != x)
-    {
         temp = temp->next;
-    }
-    ttemp = new node;
-    ttemp->data = y;
-    ttemp->next = temp->next;
-    temp->next = ttemp;
+    ttemp = temp->next;
+   p = new node;
+    p->data = y;
+    p->next = ttemp;
+    temp->next = p;
 }
 
 int main()
