@@ -93,7 +93,13 @@ void Add_before(int x, int y)
     p->next = ttemp;
     temp->next = p;
 }
-
+void Add_before_first(int x)
+{
+    temp=new node;
+    temp->data=x;
+    temp->next=first;
+    first=temp;
+}
 int main()
 {
     init();
@@ -103,8 +109,10 @@ int main()
     addnode(50);
     addnode(60);
     addnode(70);
+    
     Add_before(50, 100);
     Add_After(30, 200);
+    Add_before_first(51);
     
     disp();
     
