@@ -17,5 +17,9 @@ int main(){
 
     // printf("a=%d , b=%d", a,b);
 
-    
+    int arr[4]={1,2,4,5};
+    int xor = arr[1]^arr[2] ;
+    xor = xor >> 1;
+    printf("%d",xor);
+
 }
