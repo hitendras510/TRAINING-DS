@@ -58,10 +58,22 @@ void disp()
 }
 void delFirstNode()
 {
-    
+    temp = first->next;
+    ttemp=first->prev;
+    temp->prev = ttemp;
+    ttemp->next = temp;
+    delete first;
+    first = temp;
 }
 
-
+void delLastNode()
+{
+    temp = first->prev;
+    ttemp = temp->prev;
+    ttemp->next = first;
+    first->prev = ttemp;
+    delete temp;
+}
 
 
 int main()
@@ -71,5 +83,7 @@ int main()
     addBeforeFirst();
     disp();
     delFirstNode();
+    delLastNode();
     return 0;
 }
+
