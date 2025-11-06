@@ -74,16 +74,33 @@ void delLastNode()
     first->prev = ttemp;
     delete temp;
 }
+void LastSwap()
+{
+    temp = first->next;
+    ttemp = temp->next;
+    ttemp->next = first;
+    first->next = ttemp;
+}
 
+void SecondLastSwap()
+{
+    temp = first->next;
+    ttemp = temp->next;
+    ttemp->next = first;
+    first->next = ttemp;
+}
 
 int main()
 {
     createfirst();
     AddNode();
     addBeforeFirst();
-    disp();
     delFirstNode();
     delLastNode();
+    LastSwap();
+
+    disp();
+
     return 0;
 }
 
