@@ -56,6 +56,13 @@ void disp()
     } while (temp != first);
     cout << endl;
 }
+void delFirstNode()
+{
+    
+}
+
+
+
 
 int main()
 {
@@ -63,5 +70,6 @@ int main()
     AddNode();
     addBeforeFirst();
     disp();
+    delFirstNode();
     return 0;
 }
