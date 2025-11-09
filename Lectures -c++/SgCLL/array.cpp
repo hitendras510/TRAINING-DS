@@ -11,8 +11,7 @@ using namespace std;
   int data;
     array *next;
 };
-array *first,*temp,*ttemp,*p,*q,*r,*ptemp,*pttemp,
-*ntemp,*nttemp;
+array *first,*temp,*ttemp,*p,*q,*r;
 
 void init()
 {
