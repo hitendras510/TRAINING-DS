@@ -56,7 +56,6 @@ int main()
     for(int i=1;i<=n;i++)
     {   
         addnode();
-    
     }
     cout<<"\noriginal sequence\n";
     disp();
@@ -68,6 +67,4 @@ int main()
         cout << "Nth node from end is: " << val->data << endl;
     else
         cout << "Invalid N — exceeds list length.\n";
-
-
 }
