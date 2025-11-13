@@ -2,14 +2,22 @@
 #include<iostream>
 using namespace std;
 #define MAX 5
+/** Index:  0   1   2   3   4
+        -----------------
+data:  |   |   |   |   |   |
+        -----------------
+
+topA = -1  (before index 0)
+topB = 5   (after index 4) 
+ */
 
 struct Stack
 {
 int data[MAX]; //array data of size max 
-int topA, topB;    //two integer var.
+int topA, topB;    
 };
 
-Stack S; //STACK S AND *P
+Stack S; 
 Stack *P;
 
 void init(){
@@ -17,6 +25,12 @@ void init(){
     P=&S;
     P->topA=-1;
     P->topB=MAX;
+    /**Index of top of Stack A
+Starts from -1 meaning Stack A is EMPTY.
+while on the other hand ,
+Index of top of Stack B
+Starts from MAX meaning Stack B is EMPTY.
+**/
 }
 
 int emptyA(){
@@ -44,7 +58,16 @@ void pushA(int x){
     if(fullAB()) //if stack is full
     return;
         P->topA++; //increment topA, becoz left to right case
-P->data[P->topA]=x; //insert element
+P->data[P->topA]=x; //insert element.
+/** USING CHATGPT FOR DIAGRAM AND BETTER UNDERSTANDING.
+Index:  0    1    2    3    4
+        ------------------------
+data:  |10 |20 |    |40 |30 |
+        ------------------------
+topA=1
+topB=3
+
+ */
 }
 
 void pushB(int x){
@@ -85,3 +108,16 @@ int main(){
 
     return 0;
 }
+/** 
+  Dry Run Table
+ Operation       | topA | topB | Returned | Array--------------------------------------------------------------
+init()          |  -1  |   5  |    -     | [ _  _  _  _  _ ]
+ pushA(10)       |   0  |   5  |    -     | [10 _  _  _  _ ]
+ pushA(20)       |   1  |   5  |    -     | [10 20 _ _ _ ]
+ pushB(30)       |   1  |   4  |    -     | [10 20 _ _ 30]
+ pushB(40)       |   1  |   3  |    -     | [10 20 _ 40 30]
+ PopA()          |   0  |   3  |   20     | [10 20 _ 40 30]
+ PopB()          |   0  |   4  |   40     | [10 20 _ 40 30]
+ PopA()          |  -1  |   4  |   10     | [10 20 _ 40 30]
+ PopB()          |  -1  |   5  |   30     | [10 20 _ 40 30]
+ */
