@@ -10,7 +10,7 @@ struct Lstack
 Lstack *top, *temp; //global variables
 void init()
 {
-    top = temp = NULL; // null value assigned to both the pointers
+    top = temp = NULL; // null value assigned to both the pointers.
 }
 void Push(int x) //here x is the paarameter which is adding value to the stack.
 {
