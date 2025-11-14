@@ -21,6 +21,8 @@ int main() {
 
 
 
+
+
 // int size=5;
 // int arr[size];
 // int largest=INT_MIN;
@@ -35,36 +37,43 @@ int main() {
 
 
 
-    int size = 5;
-    int arr[size];
+
+
+    // int size = 5;
+    // int arr[size];
     
-    int largest = INT_MIN;
-    int smallest = INT_MAX;
+    // int largest = INT_MIN;
+    // int smallest = INT_MAX;
 
-    int indexLargest = 0;
-    int indexSmallest = 0;
+    // int indexLargest = 0;
+    // int indexSmallest = 0;
 
-    cout << "Enter 5 numbers: " << endl;
+    // cout << "Enter 5 numbers: " << endl;
 
-    for (int i = 0; i < size; i++) {
-        cin >> arr[i];
+    // for (int i = 0; i < size; i++) {
+    //     cin >> arr[i];
 
-        if (arr[i] > largest) {
-            largest = arr[i];
-            indexLargest = i;   // store index of largest
-        }
+    //     if (arr[i] > largest) {
+    //         largest = arr[i];
+    //         indexLargest = i;   // store index of largest
+    //     }
 
-        if (arr[i] < smallest) {
-            smallest = arr[i];
-            indexSmallest = i;  // store index of smallest
-        }
-    }
+    //     if (arr[i] < smallest) {
+    //         smallest = arr[i];
+    //         indexSmallest = i;  // store index of smallest
+    //     }
+    // }
 
-    cout << "Largest number: " << largest << endl;
-    cout << "Smallest number: " << smallest << endl;
+    // cout << "Largest number: " << largest << endl;
+    // cout << "Smallest number: " << smallest << endl;
 
-    cout << "Index of largest: " << indexLargest << endl;
-    cout << "Index of smallest: " << indexSmallest << endl;
+    // cout << "Index of largest: " << indexLargest << endl;
+    // cout << "Index of smallest: " << indexSmallest << endl;
+
+
+
+
+    
 
     return 0;
 }
