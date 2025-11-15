@@ -9,9 +9,9 @@ int main(){
     int maxSum = INT_MIN;
     int sum = 0;
 
-    for(int i=0;i<row;i++){
+    for(int j=0;j<col;j++){
         sum = 0;
-        for(int j=0;j<col;j++){
+        for(int i=0;i<row;i++){
             sum += arr[i][j];
         }
         if(sum > maxSum){
