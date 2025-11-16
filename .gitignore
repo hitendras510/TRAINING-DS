@@ -5,6 +5,7 @@
 *.dll
 *.so
 *.dylib
+tempCodeRunnerFile.c
 
 /build/
 /cmake-build-debug/
