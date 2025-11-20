@@ -13,7 +13,7 @@
   {
     int arr[]={10,20,30,40};
     int sz=4;
-    int target=50;
+    int target=40;
 
     cout<<linearSearch(arr,sz,target)<<endl;
     return 0;
