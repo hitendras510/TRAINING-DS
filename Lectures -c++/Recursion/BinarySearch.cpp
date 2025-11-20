@@ -25,6 +25,7 @@ int main(){
 
     // Convert array → vector
     vector<int> arr(a, a + sz);
+    
 
     cout << search(arr, target) << endl;
     return 0;
