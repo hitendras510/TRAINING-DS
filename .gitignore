@@ -1,3 +1,18 @@
+# =================================
+# Java
+# =================================
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+*.zip
+hs_err_pid*
+replay_pid*
+
+# =================================
+# C / C++ binaries and objects
+# =================================
 *.exe
 *.out
 *.o
@@ -5,24 +20,65 @@
 *.dll
 *.so
 *.dylib
-tempCodeRunnerFile.c
-
-/build/
-/cmake-build-debug/
-/cmake-build-release/
-
-.vscode/
-.DS_Store
-Thumbs.db
-
+*.a
+*.lib
+*.la
 *.pch
 *.pdb
 *.idb
 *.log
 
-*.a
-*.lib
-*.la
+# temp runner file
+tempCodeRunnerFile.c
 
+# =================================
+# Build directories
+# =================================
+/build/
+/cmake-build-debug/
+/cmake-build-release/
+
+# =================================
+# IDE / Editor files
+# =================================
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Eclipse
+.settings/
+.classpath
+.project
+*.tmp
+*.bak
+tmp/
+metadata/
+bin/
+
+# NetBeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbactions.xml
+nb-configuration.xml
+
+# =================================
+# OS files
+# =================================
+.DS_Store
+Thumbs.db
+
+# =================================
+# Misc
+# =================================
 *~
 *.swp
