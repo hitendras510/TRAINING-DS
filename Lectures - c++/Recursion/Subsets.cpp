@@ -36,3 +36,14 @@ int main() {
 
     return 0;
 }
+/*  
+                     {}
+               /                \
+          include 1         exclude 1
+            {1}                  {}
+        /         \         /          \
+ include 2   exclude 2   include 2   exclude 2
+   {1,2}       {1}         {2}         {}
+  /    \      /    \      /    \      /    \
+{1,2,3}{1,2}{1,3}{1}{2,3}{2}{3}{ }
+*/
