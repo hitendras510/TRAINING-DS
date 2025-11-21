@@ -4,3 +4,6 @@
  *  conditons: The solution set must not contain duplicate subsets.
 
  */
+#include <iostream>
+#include <vector>
+using namespace std;

@@ -1,4 +1,9 @@
-//unique element.
+/** Leetcode Que_78.
+ *  Link: https://leetcode.com/problems/subsets/
+  
+ *  conditons: The solution set must not contain duplicate subsets,unique elements.
+
+ */
 #include <iostream>
 #include <vector>
 using namespace std;
