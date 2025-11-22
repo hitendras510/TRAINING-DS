@@ -17,7 +17,7 @@ public:
 
 // Function to build tree from preorder vector with -1 as NULL
 Node* buildTree(vector<int>& arr, int& i) {
-    if (i >= arr.size() || arr[i] == -1) {
+    if (i >= arr.size() || arr[i] == -1) /**conditon for NULL*/ {
         i++;
         return NULL;
     }
