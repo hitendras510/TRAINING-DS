@@ -49,6 +49,8 @@ void levelOrder(Node* root){
     cout<<endl;
 }
 
+//case2. if we want to print different level element in different lines.
+
 
 
 int main(){
