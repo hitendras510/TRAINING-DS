@@ -15,7 +15,7 @@ public:
     }
 };
 
-// Function to build tree from preorder vector with -1 as NULL
+// Function to build tree from In Order vector with -1 as NULL
 Node* buildTree(vector<int>& arr, int& i) {
     if (i >= arr.size() || arr[i] == -1) /**conditon for NULL*/ {
         i++;
