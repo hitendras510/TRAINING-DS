@@ -6,7 +6,7 @@
 using namespace std;
 
 class Node{
-    public; 
+    public:
     int data;
     Node* left;
     Node* right;
@@ -15,7 +15,7 @@ class Node{
         left = NULL;
         right = NULL;
     }
-}
+};
 
 Node* buildTree( vector<int>& arr, int& i) {
     if( i >= arr.size() || arr[i] == -1){
