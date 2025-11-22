@@ -29,14 +29,43 @@ Node* buildTree( vector<int>& arr, int& i) {
     return root;
 }
 
+// void levelOrder(Node* root){
+//     queue<Node*> q;
+//     q.push(root);
+
+//     while(q.size()>0){
+//         Node* curr = q.front();
+//         q.pop();
+
+//         cout<<curr->data<<" ";
+
+//         if(curr->left!= NULL){
+//             q.push(curr->left);
+//         }
+//         if(curr->right!= NULL){
+//             q.push(curr->right);
+//         }
+//     }
+//     cout<<endl;
+// }
+
+//case2. if we want to print different level element in different lines.
 void levelOrder(Node* root){
     queue<Node*> q;
     q.push(root);
+    q.push(NULL);
 
     while(q.size()>0){
         Node* curr = q.front();
         q.pop();
 
+        if(curr==NULL){
+            cout<<endl;
+            if(q.size()>0){
+                q.push(NULL);
+            }
+            continue;
+        }
         cout<<curr->data<<" ";
 
         if(curr->left!= NULL){
@@ -47,9 +76,7 @@ void levelOrder(Node* root){
         }
     }
     cout<<endl;
-}
-
-//case2. if we want to print different level element in different lines.
+} 
 
 
 
