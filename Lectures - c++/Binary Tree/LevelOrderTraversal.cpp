@@ -32,7 +32,6 @@ Node* buildTree( vector<int>& arr, int& i) {
 void levelOrder(Node* root){
     queue<Node*> q;
     q.push(root);
-    q.push(NULL);
 
     while(q.size()>0){
         Node* curr = q.front();
