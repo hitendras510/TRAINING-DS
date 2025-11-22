@@ -30,22 +30,22 @@ Node* buildTree(vector<int>& arr, int& i) {
     return root;
 }
 
-// inOrder traversal
-void inOrderTraversal(Node* root){
+// PostOrder traversal
+void PostOrderTraversal(Node* root){
     if(root == NULL) return;
-    inOrderTraversal(root->left);
+    PostOrderTraversal(root->left);
+    PostOrderTraversal(root->right);
     cout<<root->data<<" ";
-    inOrderTraversal(root->right);
 }
 
 int main() {
-    vector<int> inOrderData = {1, 2, -1, -1, 3, 4, -1, -1, 5, -1, -1};
+    vector<int> PostOrderData = {1, 2, -1, -1, 3, 4, -1, -1, 5, -1, -1};
     int index = 0;
 
-    Node* root = buildTree(inOrderData, index);
+    Node* root = buildTree(PostOrderData, index);
 
-    cout << "InOrder Traversal: ";
-    inOrderTraversal(root);
+    cout << "POstOrder Traversal: ";
+    PostOrderTraversal(root);
     cout << endl;
 
     return 0;
